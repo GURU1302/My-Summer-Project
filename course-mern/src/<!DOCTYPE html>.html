@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Journal</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    color: #007bff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-container {
+    margin-top: 20px;
+}
+
+.emoji-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.radio-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+footer {
+    margin-top: 20px;
+    color: #6c757d;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Happy Trails with James Church</h1>
+        </header>
+
+        <main>
+            <div class="form-container">
+                <form>
+                    <label for="location">Where did this event take place?</label>
+                    <input type="text" id="location" name="location">
+
+                    <label for="description">Describe the event you wish to journal:</label>
+                    <textarea id="description" name="description"></textarea>
+
+                    <label>What emotions did you experience?</label>
+                    <div class="emoji-container">
+                        <input type="checkbox" name="emotion" value="😄"> 😄
+                        <input type="checkbox" name="emotion" value="😢"> 😢
+                        <input type="checkbox" name="emotion" value="😊"> 😊
+                        <input type="checkbox" name="emotion" value="😡"> 😡
+                    </div>
+
+                    <label>Did this event happen during the daytime or nighttime?</label>
+                    <div class="radio-container">
+                        <input type="radio" name="time" value="daytime"> Daytime
+                        <input type="radio" name="time" value="nighttime"> Nighttime
+                    </div>
+
+                    <label for="rating">Rate your event (1 to 10):</label>
+                    <input type="range" id="rating" name="rating" min="1" max="10">
+
+                    <input type="submit" value="Add this event!">
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <hr>
+            Copyright &copy; 2023 Your Name
+        </footer>
+    </div>
+</body>
+
+</html>
